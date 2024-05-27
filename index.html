@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-section">
+        <h2>Login</h2>
+        <input type="text" id="phone-number" placeholder="Enter phone number">
+        <button id="send-otp">Send OTP</button>
+        <input type="text" id="otp" placeholder="Enter OTP" style="display:none;">
+        <button id="verify-otp" style="display:none;">Verify OTP</button>
+        <div id="recaptcha-container"></div>
+    </div>
+
+    <div id="group-section" style="display:none;">
+        <button id="signout-btn">Sign Out</button>
+        <h2>Groups</h2>
+        <button id="create-group-btn">Create Group</button>
+        <button id="join-group-btn">Join Group</button>
+        <button id="show-joined-groups-btn">Joined Groups</button>
+        <div id="joined-groups-menu" style="display:none;"></div>
+        <div id="create-group" style="display:none;">
+            <input type="text" id="group-name" placeholder="Group Name">
+            <input type="text" id="group-id" placeholder="Group ID">
+            <input type="password" id="group-password" placeholder="Group Password">
+            <button id="create-group-submit">Create Group</button>
+        </div>
+        <div id="join-group" style="display:none;">
+            <input type="text" id="search-group-id" placeholder="Group ID">
+            <input type="password" id="join-group-password" placeholder="Group Password">
+            <button id="join-group-submit">Join Group</button>
+        </div>
+    </div>
+
+    <div id="chat-section" style="display:none;">
+        <button id="settings-btn">Settings</button>
+        <button id="signout-chat-btn">Sign Out</button>
+        <button id="back-to-groups-btn">Back to Groups</button>
+        <div id="settings" style="display:none;">
+            <input type="text" id="username-input" placeholder="Enter your name">
+            <button id="save-username">Save</button>
+        </div>
+        <h2>Chat</h2>
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Type a message">
+        <button id="send-message">Send</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
